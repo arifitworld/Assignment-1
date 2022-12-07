@@ -37,7 +37,21 @@ post_data = [
     }, ]
 
 # Your Code Start from here
+def slugify(text):
+    slug = text.strip().lower().replace(" ", "-")
+    return slug
+s = 0
+while s < len(post_data):
+    title = post_data[s]["title"]
+    slugs = slugify(title)
+    s += 1
 
+i = 0
+while i < len(post_data):
+    post_data[i].update({"slug": slugs})
+    post_data_1 = post_data[i]
+    print(post_data_1)
+    i += 1
 
 
 
