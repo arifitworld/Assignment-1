@@ -22,6 +22,7 @@ while i < len((mobile_data["data"])):
     split_price = price.split()
     usd_to_bdt = float(split_price[0])*100
 
-    sentence = f"The {name} released in last year. This phone is manufractured by {made}. Good news is the {name} is now available in Bangladesh with price {usd_to_bdt} bdt."
+    sentence = f"The {name} released in last year. This phone is manufractured by {made}. Good " \
+               f"news is the {name} is now available in Bangladesh with price {usd_to_bdt} bdt."
 
     print(sentence)
