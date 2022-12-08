@@ -42,14 +42,10 @@ def slugify(text):
     slug = text.strip().lower().replace(" ", "-")
     return slug
 
-s = 0
-while s < len(post_data):
-    title = post_data[s]["title"]
-    slugs = slugify(title)
-    s += 1
-
 i = 0
 while i < len(post_data):
+    title = post_data[i]["title"]
+    slugs = slugify(title)
     post_data[i].update({"slug": slugs})
     post_data_1 = post_data[i]
     print(post_data_1)
@@ -57,4 +53,4 @@ while i < len(post_data):
 
 # Your code ends here
 
-print(post_data[4])
+print(post_data[0])
